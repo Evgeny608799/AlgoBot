@@ -126,3 +126,4 @@ test-suite AlgoBot-test
     build-depends:
         base ^>=4.17.2.1,
         AlgoBot
+        AlgoBot.Interpriter
