@@ -1,4 +1,4 @@
-cabal-version:      3.0
+cabal-version:      3.4
 -- The cabal-version field refers to the version of the .cabal specification,
 -- and can be different from the cabal-install (the tool) version and the
 -- Cabal (the library) version you are using. As such, the Cabal (the library)
@@ -28,6 +28,9 @@ version:            0.1.0.0
 -- A longer description of the package.
 -- description:
 
+-- URL for the project homepage or repository.
+homepage:           https://github.com/Evgeny608799/AlgoBot
+
 -- The license under which the package is released.
 license:            MIT
 
@@ -42,7 +45,7 @@ maintainer:         freefiery@gmail.com
 
 -- A copyright notice.
 -- copyright:
-category:           Language
+category:           System
 build-type:         Simple
 
 -- Extra doc files to be distributed with the package, such as a CHANGELOG or a README.
@@ -53,28 +56,6 @@ extra-doc-files:    CHANGELOG.md
 
 common warnings
     ghc-options: -Wall
-
-library
-    -- Import common warning flags.
-    import:           warnings
-
-    -- Modules exported by the library.
-    exposed-modules:  MyLib
-
-    -- Modules included in this library but not exported.
-    -- other-modules:
-
-    -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
-
-    -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.17.2.1
-
-    -- Directories containing source files.
-    hs-source-dirs:   src-lib
-
-    -- Base language which the package is written in.
-    default-language: Haskell2010
 
 executable AlgoBot
     -- Import common warning flags.
@@ -90,40 +71,10 @@ executable AlgoBot
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:
-        base ^>=4.17.2.1,
-        AlgoBot
+    build-depends:    base ^>=4.17.2.1
 
     -- Directories containing source files.
-    hs-source-dirs:   src-exe
+    hs-source-dirs:   src
 
     -- Base language which the package is written in.
-    default-language: Haskell2010
-
-test-suite AlgoBot-test
-    -- Import common warning flags.
-    import:           warnings
-
-    -- Base language which the package is written in.
-    default-language: Haskell2010
-
-    -- Modules included in this executable, other than Main.
-    -- other-modules:
-
-    -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
-
-    -- The interface type and version of the test suite.
-    type:             exitcode-stdio-1.0
-
-    -- Directories containing source files.
-    hs-source-dirs:   test
-
-    -- The entrypoint to the test suite.
-    main-is:          Main.hs
-
-    -- Test dependencies.
-    build-depends:
-        base ^>=4.17.2.1,
-        AlgoBot
-        AlgoBot.Interpriter
+    default-language: GHC2021
